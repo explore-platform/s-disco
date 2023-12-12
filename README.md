@@ -1,5 +1,7 @@
 ## S-Disco
 
+<img src='logo_sdisco.png' height='100' />
+
 ### Local installation
 
 SDA can be run locally at `http://0.0.0.0:5006/sdisco/sda` (here a path_prefix is defined in the docker-compose.yml):
