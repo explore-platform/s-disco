@@ -1,0 +1,116 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/Apache-2.0",
+    "codeRepository": "https://github.com/explore-platform/s-disco",
+    "contIntegration": "https://github.com/explore-platform/s-disco",
+    "dateCreated": "2023-07-01",
+    "datePublished": "2023-07-01",
+    "dateModified": "2023-07-01",
+    "downloadUrl": "https://github.com/explore-platform",
+    "issueTracker": "https://github.com/explore-platform/s-disco/issues",
+    "name": "S-Disco",
+    "version": "2.0",
+    "description": "The S-Disco application provides an interactive and visual exploration of the APOGEE and Gaia RVS public spectral data, in particular in terms of anomalous and/or similarity sources.",
+    "applicationCategory": "Astronomy",
+    "releaseNotes": "-\n",
+    "funding": "This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 101004214.",
+    "developmentStatus": "active",
+    "isPartOf": "https://explore-platform.eu",
+    "referencePublication": "https://doi.org/10.5281/zenodo.6670298",
+    "readme": "https://explore-platform.eu/sdas/about/sdisco",
+    "softwareVersion": "2.0",
+    "funder": {
+        "@type": "Organization",
+        "name": "European Commission"
+    },
+    "copyrightHolder": {
+        "@type": "Organization",
+        "name": "ACRI ST - Tel-Aviv University"
+    },
+    "keywords": [
+        "Projects: EXPLORE",
+        "Gaia; Content: Astronomy",
+        "Stellar spectra",
+        "Stellar properties"
+    ],
+    "programmingLanguage": [
+        "Python",
+        "Java"
+    ],
+    "runtimePlatform": [
+        "Docker"
+    ],
+    "operatingSystem": [
+        "Ubuntu 20.04"
+    ],
+    "softwareRequirements": [
+        "Visualiser"
+    ],
+        "memoryRequirement": [
+        "2048 Mb"
+    ],
+    "processorRequirement": [
+        "4 cores"
+    ],
+    "storageRequirements": [
+        "15 Gb"
+    ],
+    "relatedLink": [
+        "https://gitlab.acri-cwa.fr/project-explore"
+    ],
+    "citation": [
+        "2022scio.confE..36C"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-9227-7346",
+            "givenName": "Emmanuel",
+            "familyName": "Bernhard",
+            "email": "emmanuel.bernhard@acri-st.fr",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "ACRI-ST"
+            }
+        },
+                {
+            "@type": "Person",
+            "@id": "-\n",
+            "givenName": "Yarden",
+            "familyName": "Eilat",
+            "email": "-\n",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Tel-Aviv University"
+            }
+        }
+    ],
+    "contributor": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0003-1470-7173",
+            "givenName": "Dovi",
+            "familyName": "Poznanski",
+            "email": "dovi@tau.ac.il",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Tel-Aviv University"
+            }
+        }
+    ],
+    "maintainer": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-9227-7346",
+            "givenName": "Emmanuel",
+            "familyName": "Bernhard",
+            "email": "emmanuel.bernhard@acri-st.fr",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "ACRI-ST"
+            }
+        }
+    ]
+
+}

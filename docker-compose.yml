@@ -1,0 +1,59 @@
+version: '3.3'
+
+services:
+    # ======================================
+    # -- PROXY
+    # The proxy is to simulate the EXPLORE's loadbalancing to a subpath
+    # ======================================
+    proxy:
+        image: 'traefik:2.4'
+        ports:
+            # - 8080:8080
+            - 8025:80
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+        command:
+            - '--api.insecure=true'
+            - '--entryPoints.web.address=:80'
+            - '--providers.docker=true'
+            - '--serverstransport.insecureskipverify=true'
+            - '--api=true'
+            - '--api.debug=true'
+            - '--log.level=INFO'
+
+    # ======================================
+    # -- S Disco SDA with visualiser
+    # ======================================
+    sda:
+      build:
+        context: ./sda/
+        dockerfile: ./_local/Dockerfile
+        # dockerfile: ./_prod/Dockerfile
+      ports:
+        - 5006:5006
+        - 20000:20000
+      env_file:
+        - .env
+      environment:
+        - PATH_PREFIX=/sdisco/
+        - SDA_ENV=SDISCO
+        - BOKEH_RESOURCES=TRUE
+        - BOKEH_RESOURCES=inline
+      volumes:
+        - ./sda/sdisco/:/sdisco/
+        # uncomment de following line to access the data for test on Local
+        - /mount/internal/work-st/projects/cee-080/1853-explore/sda/sdisco/data/:${SERVICE_APP_DATA}
+        - ./_data/output/:${SERVICE_OUTPUT_DIR}
+        - ./_data/output/:${SERVICE_USER_APP_DATA}
+
+      labels:
+          traefik.enable: 'true'
+
+          traefik.http.routers.sda.entrypoints: 'web'
+          traefik.http.routers.sda.rule: 'HostRegexp(`{host:.+}`) && PathPrefix(`/sda/`)'
+
+          # traefik.http.routers.sda.middlewares: 'sda-strip-prefix'
+          # traefik.http.middlewares.sda-strip-prefix.stripprefix.prefixes: '/sda/'
+
+          traefik.http.services.sda.loadbalancer.server.scheme: 'http'
+          traefik.http.services.sda.loadbalancer.server.port: '80'

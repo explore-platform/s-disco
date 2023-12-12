@@ -1,0 +1,21 @@
+stages:
+    - build
+  
+variables:
+    APP_IMG: gitlabreg.acri-cwa.fr:443/project-explore/sda-s-disco-mini:$CI_BUILD_REF_NAME
+    SERVICE_INPUT_DATA: /temp/input_data/
+    SERVICE_OUTPUT_DATA: /temp/output_data/
+    SERVICE_USER_APP_DATA: /temp/user_app_data/
+    SERVICE_USER_DATA: /temp/user_data/
+    SERVICE_APP_DATA: /temp/app_data/
+
+before_script:
+  - docker info
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" gitlabreg.acri-cwa.fr:443
+
+build app:
+  stage: build
+  script:
+    # - docker build . -t ${APP_IMG}
+    - docker build ./sda -t ${APP_IMG} -f ./sda/_prod/Dockerfile
+    - docker push ${APP_IMG}

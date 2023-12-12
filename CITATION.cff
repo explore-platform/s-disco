@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: S-Disco
+message: >-
+  If you use this software, please cite it using the metadata from this file.
+type: software
+authors:
+  - given-names: Emmanuel
+    family-names: Bernhard
+    email: emmanuel.bernhard@acri-st.fr
+    affiliation: ACRI-ST
+    orcid: 'https://orcid.org/0000-0001-9227-7346'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.6670298
+repository-code: 'https://github.com/explore-platform/s-disco/'
+url: 'https://explore-platform.eu/sda/s-disco'
+repository: ''
+repository-artifact: ''
+abstract: |-
+  The EXPLORE S-Disco app allows analysis and visualisation of APOGEE and Gaia RVS spectral similarity.
+keywords:
+  - EXPLORE
+  - Horizon 2020
+  - galactic
+  - Gaia RVS
+license: Apache-2.0
+version: v1
+date-released: '2023-07-01'
+

@@ -1,0 +1,6 @@
+_data/*
+sda/__pycache__
+sda/test.py
+sda/convert_apogee_tofits.py
+sda/.DS_Store
+sda/sdisco/library/__pycache__

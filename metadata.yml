@@ -1,0 +1,45 @@
+# metadata
+title: S-Disco
+abstract: "The EXPLORE S-Disco app allows analysis and visualisation of APOGEE and Gaia RVS spectral similarity."
+keyword:
+  - "EXPLORE"
+  - "Horizon 2020"
+documentation: "README.md"
+landingPage: "https://explore-platform.eu/sda/s-disco"
+version: 1.0.0
+issued: "2023-07-01"
+gitRepository: "https://github.com/explore-platform/s-disco/issues"
+citation: "https://doi.org/10.5281/zenodo.6670298"
+copyright: "Apache License 2.0"
+distribution:
+  license: "Apache License 2.0"
+doi:
+  creator: "https://zenodo.org/"
+  notation: "https://doi.org/10.5281/zenodo.6670298"
+  schemaAgency: "Zenodo"
+funding: "This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 101004214."
+funder: "European Commission"
+project: "EXPLORE"
+contactPoint:
+  email: "nick.cox@acri-st.fr"
+  id: ""
+  organisation-name: "ACRI-ST"
+  role: "EXPLORE project manager"
+  url: "https://astro.acri-st.fr"
+creator:
+  homepage: "https://explore-platform.eu"
+  id: ""
+  logo: ""
+  name: "EXPLORE"
+  nick: "EXPLORE"
+author:
+    name: "Emmanuel Bernhard"
+    email: "emmanuel.bernhard@acri-st.fr"
+    URI: "https://orcid.org/0000-0001-9227-7346"
+    affiliation: "ACRI-ST"
+publisher:
+  homepage: #URL
+  id: #URI of the publisher
+  logo: #URI to logo image for the organisation
+  name: #name of the organisation
+  nick: #short name / acronym of organisation
