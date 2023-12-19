@@ -1,8 +1,10 @@
 ## S-Disco
 
+<img src='logo_sdisco.png' height='100' />
+
 ### Local installation
 
-SDA can be run locally at `http://0.0.0.0:5006/sdisco/sda` (here a path_prefix is defined in the docker-compose.yml):
+S-Disco can be run locally at `http://0.0.0.0:5006/sdisco/sda` (here a path_prefix is defined in the docker-compose.yml):
 
     git clone https://github.com/explore-platform/s-disco.git
     cd s-disco
