@@ -378,9 +378,9 @@ def update_dataset(event):
 
     # grab the correct dataset depending on selection
     if ddm_seldata.value == 'Gaia-RVS':
-        DATA_FILE = 'rvs_data_highsnr_with_params_no_duplicates.npz'
+        DATA_FILE = 'EXPLORE_SDisco_Gaia_Results.npz'
     elif ddm_seldata.value == 'APOGEE':
-        DATA_FILE = 'data_1000.npz'
+        DATA_FILE = 'EXPLORE_SDisco_Apogee_results.npz'
 
     # load the data
     data = np.load(os.path.join(service_app_data, DATA_FILE), allow_pickle = True)
@@ -413,8 +413,8 @@ def update_dataset(event):
     # grab the correct spectra depending on the dataset (APOGEE versus RVS)
     if ddm_seldata.value == 'Gaia-RVS':
 
-        DATA_FILE = 'spectra.fits' # fits file with the spectral data
-        ID_FILE = 'GAIA_ID.csv' # file containing corresponding IDs for Gaia
+        DATA_FILE = 'EXPLORE_SDisco_Gaia_spectra.fits' # fits file with the spectral data
+        ID_FILE = 'EXPLORE_SDisco_Gaia_ID.csv' # file containing corresponding IDs for Gaia
         wav_min, wav_max = 800., 880. # min and max GAIA RVS wavelengths
 
         # cross match with the dataframe to get the corresponding spectra of each of the rows
@@ -428,7 +428,7 @@ def update_dataset(event):
 
     elif ddm_seldata.value == 'APOGEE':
 
-        DATA_FILE = 'fluxes.fits' # fits file with the spectral data
+        DATA_FILE = EXPLORE_SDisco_Apogee_spectra.fits' # fits file with the spectral data
         wav_min, wav_max = 1500., 1700. # min and max APOGEE wavelengths
 
         # add the corresponding IDs to the dataframe (directly x-referenced for APOGEE)
