@@ -18,6 +18,13 @@ Install data files (see next section) in a local folder and update `docker-compo
 
 Input data files can be retrieved from Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10405443.svg)](https://doi.org/10.5281/zenodo.10405443).
 
+The following files need to be stored in the SERVICE_APP_DATA folder (cf. `.env`):
+ - `EXPLORE_SDisco_Apogee_results.npz`
+ - `EXPLORE_SDisco_Apogee_spectra.fits`
+ - `EXPLORE_SDisco_Gaia_ID.csv`
+ - `EXPLORE_SDisco_Gaia_Results.npz`
+ - `EXPLORE_SDisco_Gaia_spectra.fits`
+
 ### User Manual & Tutorial
 
 Please find the user manual and video tutorials on https://explore-platform.eu
