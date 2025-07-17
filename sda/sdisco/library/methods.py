@@ -136,7 +136,7 @@ def create_hover_tool(apo = False):
         return HoverTool(
         tooltips=[
             ('Gaia ID', '@gaia_id'),
-            ('Distance (pc)', '@distance'),
+            ('Distance (kpc)', '@distance'),
             ('Absolute G mag', '@Mag'),
             ('BP-RP color', '@bprp_color'),
        ],
@@ -148,7 +148,7 @@ def create_hover_tool(apo = False):
         tooltips=[
             ('Gaia ID', '@gaia_id'),
             ('APOGEE ID', '@apo_id'),
-            ('Distance (pc)', '@distance'),
+            ('Distance (kpc)', '@distance'),
             ('Absolute G mag', '@Mag'),
             ('BP-RP color', '@bprp_color'),
        ],
@@ -205,9 +205,9 @@ def get_plot_type_axis(p_t):
     if p_t == "UMAP":
         return "X_umap", "Y_umap", "X", "Y"
     if p_t == "Galactic side view":
-        return "galactic_x", "galactic_y", "galactic x (pc)", "galactic y (pc)"
+        return "galactic_x", "galactic_y", "galactic x (kpc)", "galactic y (kpc)"
     if p_t == "Galactic plane":
-        return "galactic_x_plane", "galactic_y_plane", "x (pc)", "y (pc)"
+        return "galactic_x_plane", "galactic_y_plane", "x (kpc)", "y (kpc)"
     if p_t == "CM diagram":
         return "bprp_color", "Mag", "BP-RP color (mag)", "Absolute G mag"
 
