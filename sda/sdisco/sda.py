@@ -41,7 +41,7 @@ n_sel = init_global.n_sel # # of selected sources
 df_sel = init_global.df_sel # init of the dataframe listing selected sources
 df = init_global.df # df of the dataset (init)
 bounds = init_global.bounds # bounds for the selection box
-invert_yaxis = init_global.invert_yaxis # used when plotting the HR diagram to reverse Mag
+invert_yaxis = init_global.invert_yaxis # used when plotting the CM diagram to reverse Mag
 xaxis = init_global.xaxis # init for the main plot x axis
 yaxis = init_global.yaxis # init for the main plot y axis
 xlabel = init_global.xlabel # init xlabel
@@ -74,9 +74,9 @@ def update_plot_type(event):
         # get the data and labels for each of the axis based on the type selected
         xaxis, yaxis, xlabel, ylabel = methods.get_plot_type_axis(type_i)
 
-        # invert the y axis (MAG) if the HR diagram is selected
+        # invert the y axis (MAG) if the CM diagram is selected
         invert_yaxis = False
-        if type_i == 'HR diagram':
+        if type_i == 'CM diagram':
             invert_yaxis = True
 
         # generic update plot function
@@ -103,7 +103,7 @@ def update_plot_axis(event):
         xlabel = ddm_xaxis.value # name of the dropdown menu X-axis
         ylabel = ddm_yaxis.value # name of the dropdown menu Y-axis
 
-        # reset the invert y axis (only used for HR diagram)
+        # reset the invert y axis (only used for CM diagram)
         invert_yaxis = False
         # generic update plot function
         update_plot(xaxis, yaxis, xlabel, ylabel, color, bounds, invert_yaxis)
