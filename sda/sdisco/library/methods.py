@@ -171,7 +171,7 @@ def grab_description():
     which dataset to visualise between the <b><span style='color:#534998;'> Gaia-RVS </span></b>\
     and the <b><span style='color:#534998;'> APOGEE </span></b> data. </br>\
     Using the <b><span style='color:#534998;'> Plot Type</span></b> selection menu, the data\
-    can be displayed using several well known parameter spaces (e.g. UMAP, HR-diagram, etc...). </br>\
+    can be displayed using several well known parameter spaces (e.g. UMAP, CM-diagram, etc...). </br>\
     Otherwise the desired X and Y axis can be selected to any \
     parameters listed in <b><span style='color:#534998;'> X-axis</span></b> and \
     <b><span style='color:#534998;'> Y-axis</span></b> which correspond to the data columns.</br>\
@@ -208,7 +208,7 @@ def get_plot_type_axis(p_t):
         return "galactic_x", "galactic_y", "galactic x (pc)", "galactic y (pc)"
     if p_t == "Galactic plane":
         return "galactic_x_plane", "galactic_y_plane", "x (pc)", "y (pc)"
-    if p_t == "HR diagram":
+    if p_t == "CM diagram":
         return "bprp_color", "Mag", "BP-RP color (mag)", "Absolute G mag"
 
     return "", "", "", ""
