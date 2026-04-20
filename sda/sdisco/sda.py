@@ -428,7 +428,7 @@ def update_dataset(event):
 
     elif ddm_seldata.value == 'APOGEE':
 
-        DATA_FILE = EXPLORE_SDisco_Apogee_spectra.fits' # fits file with the spectral data
+        DATA_FILE = 'EXPLORE_SDisco_Apogee_spectra.fits' # fits file with the spectral data
         wav_min, wav_max = 1500., 1700. # min and max APOGEE wavelengths
 
         # add the corresponding IDs to the dataframe (directly x-referenced for APOGEE)
