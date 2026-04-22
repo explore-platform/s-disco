@@ -404,11 +404,17 @@ def update_dataset(event):
         actual_name = methods.get_color_name(option_i)
         if actual_name in df.columns:
             options_keep.append(option_i)
-    ddm_color.options = options_keep
+
+    # add astroparams to color dropdown
+    astroparams = pd.read_csv(os.path.join(service_app_data, 'astroparams_sorted_highsnr_no_duplicates.csv'))
+    ddm_color.options = options_keep + list(astroparams.columns)
 
     # redefine the "plot by" colour
-    color = methods.get_color_name(ddm_color.value)
+    color = methods.get_color_name(ddm_color.value) if methods.get_color_name(ddm_color.value) is not None else ddm_color.value
 
+    # add astroparams to df
+    df = pd.concat([df, astroparams], axis=1)
+    
     # GET THE SPECTRA AND THEIR IDs
     # grab the correct spectra depending on the dataset (APOGEE versus RVS)
     if ddm_seldata.value == 'Gaia-RVS':
