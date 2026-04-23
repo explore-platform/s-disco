@@ -219,24 +219,24 @@ def get_color_name(c_n):
 
     if c_n == "Weirdness score":
         return 'weirdness_score'
-    if c_n == "Magnitude":
+    elif c_n == "Magnitude":
         return 'Mag'
-    if c_n == "BP-RP color":
+    elif c_n == "BP-RP color":
         return 'bprp_color'
-    if c_n == "Distance":
+    elif c_n == "Distance":
         return 'distance'
-    if c_n == "Realness score":
+    elif c_n == "Realness score":
         return 'realness_score'
-    if c_n == "Metallicity":
+    elif c_n == "Metallicity":
         return 'metallicity'
-    if c_n == "Effective temperature":
+    elif c_n == "Effective temperature":
         return 'teff'
-    if c_n == "Log g":
+    elif c_n == "Log g":
         return 'logg'
-    if c_n == "Alpha/Fe":
+    elif c_n == "Alpha/Fe":
         return 'alpha_Fe'
-
-    return None
+    else:
+        return c_n
 
 def calc_avgspec(IDs, spec_dict):
     ''' display the average (with uncertainties) spectra of
