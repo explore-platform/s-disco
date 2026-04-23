@@ -306,7 +306,7 @@ def create_plot(df, x, y, color, xlabel, ylabel, bounds = None, invert_yaxis = F
 
     # options
     opts = dict(cmap='RdYlBu', line_color='black', size = 5, colorbar=True,
-        width=600, height = 550, toolbar='above', alpha = alpha_mp, color)
+        width=600, height = 550, toolbar='above', alpha = alpha_mp)
 
     # Define the elements of the toolbox
     tools = ['undo, redo, box_select']
