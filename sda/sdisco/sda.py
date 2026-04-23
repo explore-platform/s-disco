@@ -393,6 +393,10 @@ def update_dataset(event):
     ddm_xaxis.options = [""]+quantifiable
     ddm_yaxis.options = [""]+quantifiable
 
+    ASTRO_FILE = 'EXPLORE_SDisco_Gaia_astroparams.csv'
+    astroparams = pd.read_csv(os.path.join(service_app_data, ASTRO_FILE))
+    astroparams = astroparams.drop(columns=['index', 'source_id'])
+
     # Define the color dropdown menu (adapt to column available in the df)
     ddm_path = './static/widgets/ddm_color.json'
     with open(ddm_path, 'r') as f:
@@ -406,9 +410,7 @@ def update_dataset(event):
             options_keep.append(option_i)
 
     # add astroparams to color dropdown
-    astroparams = pd.read_csv(os.path.join(service_app_data, 'EXPLORE_SDisco_Gaia_astroparams.csv'))
     ddm_color.options = options_keep + list(astroparams.columns)
-
     # redefine the "plot by" colour
     color = methods.get_color_name(ddm_color.value) if methods.get_color_name(ddm_color.value) is not None else ddm_color.value
 
