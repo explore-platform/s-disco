@@ -428,6 +428,7 @@ def update_dataset(event):
         GAIA_ID_RVS['source_id'] = ['Gaia EDR3 '+str(int(id_i)) for id_i in GAIA_ID_RVS['source_id']]
         GAIA_ID_RVS['index_1'] -= 1
 
+        df = df.rename(columns = {'source_id':'source_nr'})
         # add a spec_ID column to the main df to x-ref RVS spectra
         df = pd.merge(df, GAIA_ID_RVS, left_on = ['gaia_id'], right_on = ['source_id'],
             how = 'left').drop(labels = ['source_id'],axis = 'columns').rename(columns = {'index_1':'spec_ID'})
