@@ -532,7 +532,8 @@ service_app_data = os.environ.get('SERVICE_APP_DATA')
 ###################
 
 # path to the output dir
-service_user_app_data = os.environ.get('SERVICE_USER_APP_DATA')
+# service_user_app_data = os.environ.get('SERVICE_USER_APP_DATA')
+service_user_app_data = "/media/user/"
 
 ######################
 # Add the logo image #
