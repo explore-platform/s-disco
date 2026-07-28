@@ -42,7 +42,7 @@ services:
       volumes:
         - ./sda/sdisco/:/sdisco/
         # uncomment de following line to access the data for test on Local
-        - /mount/internal/work-st/projects/cee-080/1853-explore/sda/sdisco/data/:${SERVICE_APP_DATA}
+        - /_data/:${SERVICE_APP_DATA}
         - ./_data/output/:${SERVICE_OUTPUT_DIR}
         - ./_data/output/:${SERVICE_USER_APP_DATA}
 
